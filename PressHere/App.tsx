@@ -19,14 +19,12 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
+import Circle from './src/components/Circle/Circle';
+
 // import {ReactComponent as Ellipse} from './src/components/EllipseYellow.svg';
 
 type SectionProps = PropsWithChildren<{
   title: string;
-}>;
-
-type CircleProps = PropsWithChildren<{
-  color: string;
 }>;
 
 function Section({children, title}: SectionProps): JSX.Element {
@@ -53,10 +51,6 @@ function Section({children, title}: SectionProps): JSX.Element {
       </Text>
     </View>
   );
-}
-
-function Circle({color}: CircleProps): JSX.Element {
-  return <View style={styles.yellowCircle} />;
 }
 
 function App(): JSX.Element {
@@ -109,13 +103,6 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
-  },
-  yellowCircle: {
-    backgroundColor: '#FFFF00',
-    width: 100,
-    height: 100,
-    borderRadius: 100,
-    display: 'flex',
   },
 });
 
