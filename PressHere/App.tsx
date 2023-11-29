@@ -73,10 +73,28 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Press Here">
+          <View style={[styles.titleScreenSection]}>
+            <Text
+              style={[
+                styles.titleScreenText,
+                {
+                  color: isDarkMode ? Colors.white : Colors.black,
+                },
+              ]}>
+              Press
+            </Text>
             {/* <Ellipse width={48} height={48} /> */}
             <Circle color="yellowCircle" />
-          </Section>
+            <Text
+              style={[
+                styles.titleScreenText,
+                {
+                  color: isDarkMode ? Colors.white : Colors.black,
+                },
+              ]}>
+              Here
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -100,6 +118,20 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+  },
+  titleScreenSection: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  titleScreenText: {
+    display: 'flex',
+    paddingVertical: 24,
+    color: '#203F8B',
+    fontSize: 36,
+    fontFamily: 'American Typewriter',
   },
   highlight: {
     fontWeight: '700',
